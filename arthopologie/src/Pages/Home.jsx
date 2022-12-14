@@ -128,7 +128,7 @@ export default function Home() {
                   {card.title}
                 </Heading>
                 <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
-                  {card.text}
+                 {card.text}
                 </Text>
               </Stack>
             </Container>
