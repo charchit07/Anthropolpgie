@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
 
+
+import CaptionCarousel from './Components/Navbar';
+import Navbar2 from './Components/Navbar2';
+import Nav from"./Components/Navbar3"
+import NavbarDropDown from "./Components/NavbarDropDown";
+import AllRoutes from './Components/AllRoutes';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <CaptionCarousel/>
+    <Navbar2/>
+    <Nav/>
+    <NavbarDropDown/>
+    <AllRoutes/>
     </div>
   );
 }
