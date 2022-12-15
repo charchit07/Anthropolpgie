@@ -13,7 +13,7 @@ import {
     useColorModeValue,
   } from '@chakra-ui/react';
   
-  export default function SimpleCard() {
+  export default function Signin() {
     return (
       <Flex
         minH={'100vh'}

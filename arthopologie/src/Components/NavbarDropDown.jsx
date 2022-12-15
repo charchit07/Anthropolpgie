@@ -14,6 +14,7 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    ListItem,
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -158,11 +159,11 @@ import {
           <Box>
             <Text
               transition={'all .3s ease'}
-              _groupHover={{ color: 'pink.400' }}
+              // _groupHover={{ color: 'pink.400' }}
               fontWeight={500}>
               {label}
             </Text>
-            <Text fontSize={'sm'}>{subLabel}</Text>
+            <Text fontSize={'sm'}>{subLabel.map((el)=><li type="none" _hover={{textDecoration:"underline"}}>{el}</li>)}</Text>
           </Box>
           <Flex
             transition={'all .3s ease'}
@@ -252,19 +253,30 @@ import {
   const NAV_ITEMS = [
     {
         label: 'Gift',
-        
+        children: [
+          {
+            label: 'Shop by Category',
+            subLabel: ['Explore All Gifts'," Stocking Stuffers","Giftables","Gifts for Her","Candle Gifts &Sets"],
+            href: '#',
+          },
+          {
+            label: 'Featured',
+            subLabel:  ['The Pet Shop',"The Game Shop","The George & Viv Holiday Shop","The One-Size Gift Shop","Terrian Holiday Shop"],
+            href: '#',
+          },
+        ],
       },
     {
       label: 'New!',
       children: [
         {
-          label: 'Explore Design Work',
-          subLabel: 'Trending Design to inspire you',
+          label: 'Shop by Category',
+          subLabel:  ['Accessories',"Beauty & Wellness","Clothng","Dresses","Home & Furniture","Jewelry","Petites","Plus","Shoe","BHLDN Weddings"],
           href: '#',
         },
         {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
+          label: 'Featured',
+          subLabel:  ['New Today:Clothing & Accessories'," Trending:Metallic & Shine","The Velvet Shop","House of Hackney"],
           href: '#',
         },
       ],
@@ -273,13 +285,13 @@ import {
       label: 'Dress',
       children: [
         {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
+          label: 'Shop bu Cateory',
+          subLabel: ['Shop All Dresses',"New!","Top Rated Dresses","Ocassionns & Party Dresses","Lounge & Casual Dresses","Formal Dresses","Maxi Dresses"],
           href: '#',
         },
         {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
+          label: 'Features Shops',
+          subLabel:  ['Velvet Dresses',"Trending:Tulle","Little Black Dresses","Little White Dresses"],
           href: '#',
         },
       ],
@@ -288,28 +300,28 @@ import {
         label: 'Clothing',
         children: [
           {
-            label: 'Job Board',
-            subLabel: 'Find your dream design job',
+            label: 'Shop Category',
+            subLabel: ['Shop All Clothing',"New!","Top-Rated","Activewear","Blazers","Dresses","Getaway& Resort Wear","Intimates & Lingerie","Jackets & Coats","Jeans","Jumpsuits"],
             href: '#',
           },
           {
-            label: 'Freelance Projects',
-            subLabel: 'An exclusive list for contract work',
+            label: 'Featured',
+            subLabel:  ['The Holiday Party Shop'," Trending:Metallic & Shine","The Velvet Shop","The Cozy Adventure Shop"],
             href: '#',
           },
         ],
       },
       {
-        label: 'Shoe',
+        label: 'Shoes',
         children: [
           {
-            label: 'Job Board',
-            subLabel: 'Find your dream design job',
+            label: 'Shop by Category',
+            subLabel:  ['Shop All Shoes',"New!","Top-Rated","Boot & Booties","Cold Weather Boots","Flats"],
             href: '#',
           },
           {
-            label: 'Freelance Projects',
-            subLabel: 'An exclusive list for contract work',
+            label: 'Brand We Love',
+            subLabel: ['ON',"Bibi Lou","Silent D","Sore!","UGG"],
             href: '#',
           },
         ],
@@ -318,13 +330,13 @@ import {
         label: 'Accessories',
         children: [
           {
-            label: 'Job Board',
-            subLabel: 'Find your dream design job',
+            label: 'Shop by Category',
+            subLabel: ['Shop All Accessories',"Top-Rated","Bag & Small Accessories","Belts","Gloves","Hair Accessories"],
             href: '#',
           },
           {
-            label: 'Freelance Projects',
-            subLabel: 'An exclusive list for contract work',
+            label: 'Explore Jewelry',
+            subLabel: ['Necklaces',"Earrings","Bracelets","Rings","Hoop Shop","Shop All Jewelry"],
             href: '#',
           },
         ],
@@ -333,13 +345,13 @@ import {
         label: 'BHLDN Weddings',
         children: [
           {
-            label: 'Job Board',
-            subLabel: 'Find your dream design job',
+            label: 'Shop by Category',
+            subLabel:  ['Explore All BHLDN Weddings'," Book An Appointment","Shop All Weddings","New!","Top Rated Styles","Bride","Wedding Dresses"],
             href: '#',
           },
           {
-            label: 'Freelance Projects',
-            subLabel: 'An exclusive list for contract work',
+            label: 'Bridal by Styles',
+            subLabel: ['Morden Bride'," Bohemain Bride","Beach & Destination Bride","City Hall Bride","Romantic Bride","Classic Bride"],
             href: '#',
           },
         ],
@@ -348,13 +360,13 @@ import {
         label: 'Home & Furniture',
         children: [
           {
-            label: 'Job Board',
-            subLabel: 'Find your dream design job',
+            label: 'Shop by Category',
+            subLabel:  ['Explore All Home & Furniture'," New!","Bath","Beeding","Candle & Home Fragrance","Decor","Furniture"],
             href: '#',
           },
           {
-            label: 'Freelance Projects',
-            subLabel: 'An exclusive list for contract work',
+            label: 'AnthroLiving House Tours',
+            subLabel:  ['Less Is More',"House of Hackney","A Sense of Place","*Sol*ful Spaces","The Story Of Home","Be Our Guest","True Nature","Lit From Within"],
             href: '#',
           },
         ],
@@ -363,13 +375,13 @@ import {
         label: 'Beauty & Wellness',
         children: [
           {
-            label: 'Job Board',
-            subLabel: 'Find your dream design job',
+            label: 'Shop by Category',
+            subLabel: ['Shop All Beauty & Wellness',"New!","Top-Rated","Beauty Gifts & Sets","Bath & Body","Candles & Home Fragrance"],
             href: '#',
           },
           {
-            label: 'Freelance Projects',
-            subLabel: 'An exclusive list for contract work',
+            label: 'Featured',
+            subLabel:  ['The George & Viv Holiday Shop'," Anthropologie Exclusives","Beauty Gifts Under $25","Travel Size"],
             href: '#',
           },
         ],
@@ -378,28 +390,24 @@ import {
         label: 'Garden & Outdoor',
         children: [
           {
-            label: 'Job Board',
-            subLabel: 'Find your dream design job',
+            label: 'Shop by Category',
+            subLabel: ['Shop All Garden & Outdoor'," Planters","Garden & Utility","Outdoor Living","Furniture","Plant & Flowers"],
             href: '#',
           },
-          {
-            label: 'Freelance Projects',
-            subLabel: 'An exclusive list for contract work',
-            href: '#',
-          },
+          
         ],
       },
       {
         label: 'Sale',
         children: [
           {
-            label: 'Job Board',
-            subLabel: 'Find your dream design job',
+            label: 'Shop by Category',
+            subLabel:  ['Shop All Sales',"Freshly Cut","Accessories","Beauty & Wellness","Clothing","Home & Furniture"],
             href: '#',
           },
           {
-            label: 'Freelance Projects',
-            subLabel: 'An exclusive list for contract work',
+            label: 'Shop by Price',
+            subLabel:  ['Under $25'," Under $50","Under $75","Under $100"],
             href: '#',
           },
         ],
