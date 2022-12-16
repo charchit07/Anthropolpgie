@@ -54,6 +54,7 @@ export default function CaptionCarousel() {
   return (
     <Box
       position={'relative'}
+      
       height={'50px'}
       width={'full'}
       overflow={'hidden'}>

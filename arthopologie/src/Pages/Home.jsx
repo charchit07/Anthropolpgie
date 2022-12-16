@@ -1,5 +1,7 @@
 import React from 'react';
-// import Carousel1 from '../Components/Carousel1';
+
+import Final from '../Components/Carousel/Final';
+import "react-multi-carousel/lib/styles.css";
 import {
   Box,
   IconButton,
@@ -16,7 +18,7 @@ import {
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
-
+import{Link as RouterLink} from "react-router-dom"
 // Settings for the slider
 const settings = {
   dots: true,
@@ -179,7 +181,11 @@ export default function Home() {
 
     {data.map((item,i)=>(
       <div  key={i}>
-       <img src={item.img} width="100%"/>   
+          <RouterLink to="/products">
+        <Box>
+       <img src={item.img} width="100%"/>  
+       </Box> 
+       </RouterLink>
        </div>    
     ))}
     
@@ -188,9 +194,11 @@ export default function Home() {
  <Grid  ml="5%"  mt="40px">
 {data2.map((item,i)=>(
   <div  key={i}>
+     <RouterLink to="/products">
     <Box>
    <img src={item.img} width="95%"/>  
    </Box> 
+   </RouterLink>
    <Center>
    <Button style={{width:"auto",backgroundColor:"white", mt:"-100px",position:"relative",bottom:"70px",borderRadius:"none"}}>
     {item.title}
@@ -203,9 +211,11 @@ export default function Home() {
 <Grid  ml="5%"  mt="40px">
 {data3.map((item,i)=>(
   <div  key={i}>
+     <RouterLink to="/products">
     <Box>
    <img src={item.img} width="95%"/>  
    </Box>
+   </RouterLink>
    <Center>
    <Button style={{width:"auto",backgroundColor:"white", mt:"-100px",position:"relative",bottom:"70px",borderRadius:"none"}}>
     {item.title}
@@ -219,9 +229,11 @@ export default function Home() {
 <Grid  ml="5%"  mt="40px">
 {data4.map((item,i)=>(
   <div  key={i} >
+     <RouterLink to="/products">
      <Box>
    <img src={item.img} width="95%"/>
    </Box>
+   </RouterLink>
    <Center>
    <Button style={{width:"auto",backgroundColor:"white", mt:"-100px",position:"relative",bottom:"70px",borderRadius:"none"}}>
     {item.title}
@@ -236,9 +248,11 @@ export default function Home() {
 
     {data5.map((item,i)=>(
       <div  key={i}>
+         <RouterLink to="/products">
         <Box>
        <img src={item.img} width="100%"/>   
        </Box>
+       </RouterLink>
        <Center>
    <Button style={{width:"auto",backgroundColor:"white", mt:"-100px",position:"relative",bottom:"70px",borderRadius:"none"}}>
     {item.title}
@@ -255,9 +269,11 @@ export default function Home() {
 
 {data6.map((item,i)=>(
   <div  key={i}>
+      <RouterLink to="/products">
     <Box>
    <img src={item.img} width="100%"/>  
    </Box> 
+   </RouterLink>
    <Center>{item.title}</Center>
    </div>    
 ))}
@@ -267,17 +283,20 @@ export default function Home() {
 <Text style={{marginLeft:"68px",marginTop:"90px"}}> Trending</Text>
  <hr/>
 
- <Grid templateColumns="repeat(5,18%)" ml="5%" gap="4" mt="20px">
+ {/* <Grid templateColumns="repeat(5,18%)" ml="5%" gap="4" mt="20px">
 
 {data7.map((item,i)=>(
   <div  key={i}>
+     <RouterLink to="/products">
     <Box>
    <img src={item.img} width="100%"/>  
    </Box> 
+   </RouterLink>
    <Center>{item.title}</Center>
    </div>    
 ))}
-</Grid>
+</Grid> */}
+<Final/>
 <Center>
 <Text style={{marginLeft:"68px",marginTop:"90px"}}> More</Text>
 </Center>
@@ -287,9 +306,11 @@ export default function Home() {
 
 {data8.map((item,i)=>(
   <div  key={i}>
+      <RouterLink to="/products">
     <Box>
    <img src={item.img} width="100%"/>  
    </Box> 
+   </RouterLink>
    <Text fontWeight="300">
    {item.name}
    </Text>
