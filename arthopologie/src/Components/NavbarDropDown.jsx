@@ -226,13 +226,6 @@ const MobileNavItem = ({ label, children, href }) => {
   );
 };
 
-//   interface NavItem {
-//     label: string;
-//     subLabel?: string;
-//     children?: Array<NavItem>;
-//     href?: string;
-//   }
-
 const NAV_ITEMS = [
   {
     label: "Gift",

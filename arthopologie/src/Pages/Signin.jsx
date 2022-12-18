@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 
 export default function Signin() {
+ 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const Navigate = useNavigate();
@@ -33,6 +34,7 @@ export default function Signin() {
     if (email === "" && password === "") {
       alerts();
     } else {
+     
       localStorage.setItem("email", JSON.stringify(email));
       Navigate("/");
     }
@@ -99,4 +101,5 @@ export default function Signin() {
       </Stack>
     </Flex>
   );
-}
+ }
+

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   IconButton,
@@ -7,11 +7,11 @@ import {
   Heading,
   Text,
   Container,
-} from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
-import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
-// And react-slick as our Carousel Lib
-import Slider from 'react-slick';
+} from "@chakra-ui/react";
+
+import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
+
+import Slider from "react-slick";
 
 // Settings for the slider
 const settings = {
@@ -27,37 +27,31 @@ const settings = {
 };
 
 export default function CaptionCarousel() {
-  // As we have used custom buttons, we need a reference variable to
-  // change the state
-  const [slider, setSlider] = React.useState(0)
-
-  // These are the breakpoints which changes the position of the
-  // buttons as the screen size changes
-  const top = useBreakpointValue({ base: '90%', md: '50%' });
-  const side = useBreakpointValue({ base: '30%', md: '40px' });
+  
+  const [slider, setSlider] = React.useState(0);
+  const top = useBreakpointValue({ base: "90%", md: "50%" });
+  const side = useBreakpointValue({ base: "30%", md: "40px" });
 
   // This list contains all the data for carousels
   // This can be static or loaded from a server
   const cards = [
     {
-   
       image:
-        'https://images.ctfassets.net/5de70he6op10/5NDVFY5RDAIK18WCU9rB1k/b374cc0bfea36e5e4cfabc0af26d5eaf/Holiday22_SiteFooter_EGiftCards_LS.jpg?w=2882&q=80&fm=webp',
+        "https://images.ctfassets.net/5de70he6op10/5NDVFY5RDAIK18WCU9rB1k/b374cc0bfea36e5e4cfabc0af26d5eaf/Holiday22_SiteFooter_EGiftCards_LS.jpg?w=2882&q=80&fm=webp",
     },
     {
-   
       image:
-        'https://images.ctfassets.net/5de70he6op10/g4Rao5dp4XYh9mHJ31Mku/d4fa659fb2753c2aba8ff20538ba126f/121322_Upto50Off_SelectGifting_HPGSecondaryBanner_LS.jpg?w=2882&q=80&fm=webp',
+        "https://images.ctfassets.net/5de70he6op10/g4Rao5dp4XYh9mHJ31Mku/d4fa659fb2753c2aba8ff20538ba126f/121322_Upto50Off_SelectGifting_HPGSecondaryBanner_LS.jpg?w=2882&q=80&fm=webp",
     },
   ];
 
   return (
     <Box
-      position={'relative'}
-      
-      height={'50px'}
-      width={'full'}
-      overflow={'hidden'}>
+      position={"relative"}
+      height={"50px"}
+      width={"full"}
+      overflow={"hidden"}
+    >
       {/* CSS files for react-slick */}
       <link
         rel="stylesheet"
@@ -77,9 +71,10 @@ export default function CaptionCarousel() {
         position="absolute"
         left={side}
         top={top}
-        transform={'translate(0%, -50%)'}
+        transform={"translate(0%, -50%)"}
         zIndex={2}
-        onClick={() => slider?.slickPrev()}>
+        onClick={() => slider?.slickPrev()}
+      >
         <BiLeftArrowAlt size="40px" />
       </IconButton>
       {/* Right Icon */}
@@ -89,9 +84,10 @@ export default function CaptionCarousel() {
         position="absolute"
         right={side}
         top={top}
-        transform={'translate(0%, -50%)'}
+        transform={"translate(0%, -50%)"}
         zIndex={2}
-        onClick={() => slider?.slickNext()}>
+        onClick={() => slider?.slickNext()}
+      >
         <BiRightArrowAlt size="40px" />
       </IconButton>
       {/* Slider */}
@@ -99,25 +95,27 @@ export default function CaptionCarousel() {
         {cards.map((card, index) => (
           <Box
             key={index}
-            height={'0.5xl'}
+            height={"0.5xl"}
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize="cover"
-            backgroundImage={`url(${card.image})`}>
+            backgroundImage={`url(${card.image})`}
+          >
             {/* This is the block you need to change, to customize the caption */}
             <Container size="container.lg" height="50px" position="relative">
               <Stack
                 spacing={6}
-                w={'full'}
-                maxW={'lg'}
+                w={"full"}
+                maxW={"lg"}
                 position="absolute"
                 top="50%"
-                transform="translate(0, -50%)">
-                <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
+                transform="translate(0, -50%)"
+              >
+                <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
                   {card.title}
                 </Heading>
-                <Text fontSize={{ base: 'md', lg: 'lg' }} color="GrayText">
+                <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
                   {card.text}
                 </Text>
               </Stack>
@@ -127,6 +125,4 @@ export default function CaptionCarousel() {
       </Slider>
     </Box>
   );
-};
-
-
+}
