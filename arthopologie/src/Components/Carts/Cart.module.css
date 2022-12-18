@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.basket{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 26px;
+    margin: 0;
+    margin-left: 6px;
+}
+
+.items{
+    width: 50%;
+    margin-left: 6px;
+}
+.items>p{
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+.itemsPrice{
+    width: 50%;
+}
+.itemsPrice>p{
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 5px;
+}

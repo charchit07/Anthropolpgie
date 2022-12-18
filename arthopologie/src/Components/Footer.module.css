@@ -1,0 +1,314 @@
+.maindiv {
+    font-family:
+        "Avenir Medium", sans-serif;
+    background: #f7f6f2;
+    margin-top: 40px;
+
+}
+
+.maindiv>div>div>p:last-child {
+
+    color: #5c5c5f
+}
+
+.maindiv>div>div>p:first-child {
+    color: #26262c;
+    letter-spacing: 0.6px;
+    font-size: 18px;
+    line-height: 23.4px;
+    font-weight: 400;
+}
+
+.maindiv>div>div>p:last-child {
+    font-size: 12px;
+    font-Weight: 400;
+    letter-spacing: 0.6px;
+    line-height: 24px;
+}
+
+.emaildiv {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.maindiv>div>div:first-child {
+    margin-left: 80px;
+}
+
+.maindiv>div>div:last-child {
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+.emaildiv>div>input {
+    width: 500px;
+    height: 40px;
+    font-size: 14px;
+    border: 1px solid #4b5666;
+    border-radius: 4px;
+}
+
+input[type=email]:focus {
+    border: 3px solid #0357ac;
+}
+
+.emaildiv>div>button {
+    width: 100px;
+    height: 45px;
+    margin-left: 20px;
+    background: #4b5666;
+    color: white;
+    letter-spacing: 2.4px;
+    border: 1px solid #4b5666;
+    cursor: pointer;
+    margin-top: 5px;
+
+}
+
+label {
+    font-size: 13px;
+
+}
+
+.emaildiv>div>button:hover {
+    background: white;
+    color: #4b5666;
+}
+
+.midp {
+    letter-spacing: 0.6px;
+    font-size: 11px;
+    color: #5c5c5f;
+    margin-left: 30px;
+
+}
+
+.midp>a {
+    text-decoration: none;
+    color: #167a92;
+}
+
+.midp>a:hover {
+    text-decoration: underline;
+}
+
+hr {
+
+    height: 0.2px;
+    background-color: #c9bbbb;
+    border: none;
+}
+
+.flexh3 {
+    font-size: 13px;
+    letter-spacing: normal;
+    line-height: 10px;
+    font-weight: 400;
+    margin-right: 0px;
+    color: #26262c;
+}
+
+.flexdiv>div>a {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.6px;
+    font-weight: 400;
+    text-decoration: underline solid rgb(38, 38, 44);
+
+}
+
+.flexdiv {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+
+
+}
+
+.flexdiv>div:first-child {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.flexdiv>div {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.flexdiv>div>a {
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #26262c;
+    font-family: "Avenir Book", sans-serif;
+    letter-spacing: 0.6;
+    font-size: 12px;
+}
+
+i {
+    background-color: blue;
+    color: white;
+}
+
+.flexdiv>div>a:hover {
+    text-decoration: underline;
+}
+
+.image {
+    width: 90%;
+    margin: 0px 60px;
+    height: 120px;
+}
+
+.fdiv>hr {
+    height: 13px;
+    width: 1.5px;
+    margin-top: 20px;
+
+}
+
+.fdiv {
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    margin: auto;
+
+}
+
+.fdiv>p>a {
+    text-decoration: none;
+    color: #26262c;
+    font-family: "Avenir Book", sans-serif;
+
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.fdiv>p>a:hover {
+    text-decoration: underline;
+}
+
+.insta {
+    color: #167a92;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+.insta:hover {
+    color: black;
+}
+
+.instadiv {
+    display: flex;
+    justify-content: center;
+
+}
+
+.instadiv>div>img {
+    margin-top: 15px;
+}
+
+.flexdiv>div:last-child>a {
+    color: #5eb9e0;
+}
+
+.grtag {
+    font-size: 18px;
+    padding-right: 5px;
+    color: #5eb9e0;
+
+}
+
+.gmtag {
+    font-size: 18px;
+    padding-right: 5px;
+    color: #5eb9e0;
+}
+
+.mtag {
+    color: #5eb9e0;
+    font-family: "Avenir Book", sans-serif;
+    line-height: 16.9px;
+    letter-spacing: 0.6px;
+    font-family:
+        "Avenir Medium", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+    margin-bottom: 15px;
+
+}
+
+.mtag:hover {
+    color: rgb(38, 38, 44);
+    text-decoration:
+        underline solid rgb(38, 38, 44)
+}
+
+.bfdiv {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+
+
+    margin-left: 20%;
+    font-family:
+        "Avenir Medium", sans-serif;
+
+}
+
+.bffdiv>p {
+    color: #26262c;
+    font-family: "Avenir Book", sans-serif;
+
+    font-size: 10px;
+    font-weight: 400;
+
+    line-height: 16.5px;
+    letter-spacing: 0.6px;
+
+}
+
+.lastdiv {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+
+}
+
+.bfdiv>hr {
+    height: 13px;
+    width: 1.5px;
+    margin-top: 20px;
+    color:
+        #167a92;
+
+}
+
+.bfdiv>a {
+
+    text-decoration: none;
+    color:
+        #167a92;
+    font-family: "Avenir Book", sans-serif;
+
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 16.5px;
+    letter-spacing: 0.6px;
+
+}
+
+.bfdiv>a:hover {
+    color: #26262c;
+    text-decoration: underline;
+}
+
+.social{
+    display: flex;
+}
