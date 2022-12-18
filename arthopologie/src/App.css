@@ -1,0 +1,12 @@
+
+.Banner4:hover {
+    text-decoration: underline;
+}
+
+.photo{
+    height: 500px;
+}
+.photo > img {
+    height:100%
+}
+
